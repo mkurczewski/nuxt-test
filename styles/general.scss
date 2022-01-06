@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap&subset=latin-ext");
+
+.basic-text {
+  line-height: 2;
+  font-size: var(--font-size-tiny);
+
+  @media (min-width: $br-tablet-large) {
+    font-size: var(--font-size-small);
+  }
+
+  p {
+    font-size: inherit;
+    line-height: inherit;
+
+    &:not(:first-of-type) {
+      margin-top: 1em;
+    }
+  }
+
+  li {
+    display: block;
+    align-items: baseline;
+    line-height: 1.8;
+    padding: 0.15rem 0;
+
+    @media (min-width: $br-tablet-large) {
+      padding: 0.2rem 0;
+    }
+
+    &:before {
+      float: left;
+      margin-right: 0.5rem;
+      margin-left: -1rem;
+      color: var(--color-pink);
+
+      @media (min-width: $br-tablet-large) {
+        margin-right: 1rem;
+        margin-left: -2rem;
+      }
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+    margin-left: 1rem;
+
+    @media (min-width: $br-tablet-large) {
+      margin-left: 2rem;
+    }
+  }
+
+  ul {
+    li {
+      &:before {
+        content: "\25CB";
+      }
+    }
+  }
+
+  ol {
+    counter-reset: ol-counter;
+
+    > li {
+      &:before {
+        counter-increment: ol-counter;
+        content: counter(ol-counter);
+        font-size: 1em;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  ul,
+  ol,
+  p {
+    & + .button {
+      margin-top: 2rem;
+    }
+  }
+}

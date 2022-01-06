@@ -1,0 +1,63 @@
+/* Breakpoints */
+$br-mobile-small: 320px;
+$br-mobile: 375px;
+$br-mobile-large: 475px;
+$br-tablet-small: 640px;
+$br-tablet: 768px;
+$br-tablet-large: 960px;
+$br-desktop: 1140px;
+$br-desktop-large: 1400px;
+
+:root {
+  font-size: 10px;
+  font-family: PT Serif, serif;
+
+  /* App settings */
+  --app-width: 960px;
+  --app-max-width: 1140px;
+
+  @media (max-height: 800px) {
+    --app-width: 110vh;
+  }
+
+  @media (min-width: $br-desktop) and (max-height: 700px) {
+    --app-width: 770px;
+  }
+
+  /* Layers */
+  --indexMobileMenuButton: 11;
+  --indexSidebar: 10;
+  --indexMain: 8;
+
+  /* Colors */
+  --color-white: #ffffff;
+  --color-white-dark: #cdcdcd;
+  --color-black: #000000;
+  --color-black-transparent: #00000040;
+  --color-dark-blue: #121331;
+  --color-pink: #e91e63;
+  --color-pink-light: #e91e630a;
+
+  /* Backgrounds */
+  --background-light-pink: #f9f6f6;
+
+  /* Shadows */
+  --shadow-default: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  --shadow-transparent: 0 0 10px 0 rgba(0, 0, 0, 0);
+
+  /* Font sizes */
+  --font-size-tiny: 1.4rem;
+  --font-size-small: 1.6rem;
+  --font-size-medium: 2rem;
+  --font-size-big: 2.2rem;
+  --font-size-large: 3.2rem;
+
+  /* Transitions */
+  --transition-quick: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+
+  /* Borders */
+  --border-radius-small: 2px;
+  --border-radius-medium: 5px;
+}

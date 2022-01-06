@@ -1,0 +1,26 @@
+/* === FUNCTIONS === */
+
+/*
+ Remove the unit of a length
+ @param {Number} $number - Number to remove unit from
+ @return {Number} - Unitless number
+*/
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/* === MIXINS === */
+
+/*
+  Style parent with given class
+  @param {String} $class - Parent's class you want to style with
+*/
+@mixin parent-class($class) {
+  @at-root .#{$class}#{&} {
+    @content;
+  }
+}
