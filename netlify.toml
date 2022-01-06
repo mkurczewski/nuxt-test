@@ -1,0 +1,23 @@
+[build]
+  command = "npm run generate"
+  publish = "dist"
+  functions = ".functions"
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+[[redirects]]
+  from = "/public/pdf/cennik-rzesy.pdf"
+  to = "/cennik/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/public/pdf/cennik-masaze.pdf"
+  to = "/cennik/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/public/pdf/cennik-studio-paznokci.pdf"
+  to = "/cennik/"
+  status = 301
+  force = true
